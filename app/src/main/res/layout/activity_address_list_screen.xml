@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addresslist.AddressListScreen"
+    android:background="@color/white">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addToCartToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorprimaryred"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnAddToCartToolbarBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_chevron_left_24"/>
+
+
+        <TextView
+            android:id="@+id/addToCartToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_medium"
+            android:layout_gravity="center"
+            android:text="Address List"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+        <ImageView
+            android:id="@+id/imgAddAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_baseline_add_24"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/addressTitle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="11.67dp"
+        android:layout_marginLeft="13.33dp"
+        android:layout_height="wrap_content"
+        android:text="Shipping Address"
+        android:textSize="22dp"
+        android:fontFamily="@font/gotham_book"
+        android:textColor="@color/descriptiontextcolor"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addToCartToolbar"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addressListRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/address_list_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTitle" />
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addressListRecyclerView"
+        android:layout_marginTop="26.67dp"
+        android:text="PLACE ORDER"
+        android:textSize="20sp"
+        android:padding="13dp"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginRight="13.33dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

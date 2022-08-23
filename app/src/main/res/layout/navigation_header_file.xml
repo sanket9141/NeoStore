@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/navigatoinheadercolor"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="95.23dp"
+        android:layout_height="95.23dp"
+        android:layout_marginTop="35.66dp"
+        android:src="@drawable/profileavtar"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/white"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProfileName"
+        android:text="Sanket Sheul"
+        android:textColor="@color/white"
+        android:layout_marginTop="20.57dp"
+        android:textSize="23sp"
+        android:fontFamily="@font/gotham_medium"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProfileEmail"
+        android:text="sanketshejul86@gmail.com"
+        android:textColor="@color/white"
+        android:layout_marginTop="15.23dp"
+        android:textSize="13sp"
+        android:paddingBottom="13.33dp"
+        android:fontFamily="@font/gotham_book"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/navDrawer"
+    android:layout_height="match_parent"
+    tools:context=".homescreen.HomeScreen"
+    android:fitsSystemWindows="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorprimaryred"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/carouselView">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NeoSTORE"
+            android:fontFamily="@font/gotham_medium"
+            android:textSize="22sp"
+            android:layout_marginRight="?android:attr/actionBarSize"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="0dp"
+        android:layout_height="254dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar"
+        app:fillColor="@color/grey"
+        app:pageColor="@color/colorprimaryred"
+        app:radius="6dp"
+        app:indicatorMarginVertical="7dp"
+        app:strokeColor="#00FFFFFF"/>
+
+    <ImageView
+        android:id="@+id/imgTableIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carouselView"
+        app:layout_constraintBottom_toTopOf="@+id/imgChairIcon"
+        app:layout_constraintEnd_toStartOf="@+id/imgSofaIcon"
+        android:src="@drawable/tableicon"
+        android:layout_marginLeft="15.23dp"
+        android:layout_marginTop="17.143dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true" />
+
+    <ImageView
+        android:id="@+id/imgSofaIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/imgTableIcon"
+        app:layout_constraintTop_toBottomOf="@+id/carouselView"
+        app:layout_constraintBottom_toTopOf="@+id/imgCupBoardIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/sofaicon"
+        android:layout_marginRight="15.23dp"
+        android:layout_marginTop="17.143dp"
+        android:layout_marginLeft="13.33dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:id="@+id/imgChairIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgCupBoardIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imgTableIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="15.23dp"
+        android:layout_marginTop="13.33dp"
+        android:src="@drawable/chairsicon"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="10dp" />
+
+    <ImageView
+        android:id="@+id/imgCupBoardIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/imgChairIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imgSofaIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="15.23dp"
+        android:src="@drawable/cupboardicon"
+        android:layout_marginTop="13.33dp"
+        android:layout_marginLeft="13.33dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+
+        android:id="@+id/NavigationView"
+        app:theme="@style/NavigationDrawerTextStyle"
+        app:headerLayout="@layout/navigation_header_file"
+        app:menu="@menu/navigation_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|left"
+        android:fitsSystemWindows="true"
+        android:background="@color/navigatoinheadercolor"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

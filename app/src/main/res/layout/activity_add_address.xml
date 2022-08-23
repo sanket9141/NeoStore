@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/productdetailbackground">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addToAddressToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorprimaryred"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnAddToCartToolbarBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_chevron_left_24" />
+
+
+        <TextView
+            android:id="@+id/addToCartToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gotham_medium"
+            android:text="Add Address"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/imgAddAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/search_icon" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginTop="26.67dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="ADDRESS"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="16.67dp"
+        app:layout_constraintBottom_toTopOf="@+id/edittxtAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addToAddressToolbar" />
+
+    <TextView
+        android:id="@+id/edittxtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13.33dp"
+        android:background="@color/white"
+        android:fontFamily="@font/gotham_book"
+        android:minHeight="83.33dp"
+        android:padding="5dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="16.67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+    <TextView
+        android:id="@+id/txtLandMark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginTop="26.67dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="LANDMARK"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="16.67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtAddress"
+
+        />
+
+    <EditText
+        android:id="@+id/edittxtLandMark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13.33dp"
+        android:background="@color/white"
+        android:fontFamily="@font/gotham_book"
+        android:hint="LandMark"
+        android:padding="10dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="13.33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLandMark"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursordrawable"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+    <TextView
+        android:id="@+id/txtcityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginTop="26.67dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="CITY"
+        android:layout_marginRight="6.67dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="16.67dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtLandMark" />
+    <EditText
+        android:id="@+id/edittxtCityName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="13.33dp"
+        android:background="@color/white"
+        android:fontFamily="@font/gotham_book"
+        android:hint="City"
+        android:padding="10dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="13.33dp"
+        android:layout_marginRight="6.67dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcityName"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursordrawable"/>
+
+    <TextView
+        android:id="@+id/txtZipCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginTop="26.67dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="ZIP CODE"
+        android:layout_marginRight="6.67dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="16.67dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtCityName" />
+    <EditText
+        android:id="@+id/edittxtZipCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="13.33dp"
+        android:background="@color/white"
+        android:fontFamily="@font/gotham_book"
+        android:hint="Zip Code"
+        android:padding="10dp"
+        android:inputType="number"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="13.33dp"
+        android:layout_marginRight="6.67dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtZipCode"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursordrawable"/>
+
+
+    <TextView
+        android:id="@+id/txtState"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginTop="26.67dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="STATE"
+        android:layout_marginRight="6.67dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="16.67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtLandMark" />
+    <EditText
+        android:id="@+id/edittxtstate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="13.33dp"
+        android:background="@color/white"
+        android:fontFamily="@font/gotham_book"
+        android:hint="State"
+        android:padding="10dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="13.33dp"
+        android:layout_marginRight="6.67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/txtState"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursordrawable"/>
+    <TextView
+        android:id="@+id/txtCountry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginTop="26.67dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="COUNTRY"
+        android:layout_marginRight="6.67dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="16.67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtstate"
+        />
+    <EditText
+        android:id="@+id/edittxtCountry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="13.33dp"
+        android:background="@color/white"
+        android:fontFamily="@font/gotham_book"
+        android:hint="Country"
+        android:padding="10dp"
+        android:textColor="@color/resetpasswordcolor"
+        android:textSize="13.33dp"
+        android:layout_marginRight="6.67dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/txtCountry"
+        android:cursorVisible="true"
+        android:textCursorDrawable="@drawable/cursordrawable"/>
+
+    <Button
+        android:id="@+id/btnSaveAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittxtZipCode"
+        android:layout_marginTop="26.67dp"
+        android:text="SAVE ADDRESS"
+        android:textSize="20sp"
+        android:padding="13dp"
+        android:layout_marginLeft="13.33dp"
+        android:layout_marginRight="13.33dp"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

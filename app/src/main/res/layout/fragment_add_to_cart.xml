@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mycart.AddToCartFragment"
+    android:orientation="vertical"
+    android:minWidth="1000dp"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/txtQtyItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="@color/descriptiontextcolor"
+        android:fontFamily="@font/gotham_book"
+        android:text=""
+        android:layout_marginTop="33.33dp"/>
+
+    <ImageView
+        android:id="@+id/imgQtyItemImage"
+        android:layout_width="257.33dp"
+        android:layout_height="178dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="33.33dp" />
+    <TextView
+        android:id="@+id/txtQtyEnterQtyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33.33dp"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:fontFamily="@font/gotham_book"
+        android:textColor="@color/colorprimaryvariant"
+        android:textAlignment="center"
+        android:text="Enter Qty"/>
+    
+    <EditText
+        android:id="@+id/txtQtyEnterQuantity"
+        android:layout_width="112dp"
+        android:paddingLeft="20dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="22dp"
+        android:focusedByDefault="false"
+        android:layout_gravity="center"
+        android:background="@drawable/quantity_border_green"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/btnQtySubmitButton"
+        android:layout_width="198.33dp"
+        android:layout_height="47.33dp"
+        android:layout_gravity="center"
+        android:text="SUBMIT"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="33.33dp"/>
+
+
+    
+
+
+</LinearLayout>

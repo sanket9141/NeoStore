@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">NeoStore</string>
+    <string name="neostore">NeoSTORE</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_an_account">DONT HAVE AN ACCOUNT?</string>
+    <string name="add_account">add_account</string>
+    <string name="first_name">First Name</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+</resources>

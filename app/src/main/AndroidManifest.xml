@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.neostore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@drawable/neostore"
+        android:roundIcon="@drawable/neostore"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NeoStore"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCHMrbOKzz4xBa7LFZbjXgK2DOT833e2R8" />
+
+        <activity
+            android:name=".storelocator.StoreLocatorScreen"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".orderdetail.OrderActivtyScreen"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".orderlist.MyOrdersScreen"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".address.AddAddress"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name="com.example.neostore.addresslist.AddressListScreen"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".mycart.MyCartScreen"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".productdetail.ProductDetailScreen"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home">
+            <intent-filter android:autoVerify="true">
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data
+                    android:scheme="http"
+                    android:host="www.neostore.com"
+                     />
+                <!-- note that the leading "/" is required for pathPrefix-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".myaccount.MyAccount"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".forgotpassword.ForgotPasswordScreen"
+            android:exported="true" />
+        <activity
+            android:name=".productlist.ProductListing"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".homescreen.HomeScreen"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Home" />
+        <activity
+            android:name=".registration.RegistrationScreen"
+            android:exported="true" />
+        <activity
+            android:name=".login.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NeoStore.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+    </application>
+
+</manifest>

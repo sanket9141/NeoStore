@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".editprofile.EditProfileFragment"
+    android:background="#e91b1a">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorprimaryred"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/editAccountBackPress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_chevron_left_24"/>
+        <TextView
+            android:id="@+id/myAccountToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_medium"
+            android:layout_gravity="center"
+            android:text="Edit Profile"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+        <ImageView
+            android:id="@+id/myAccountImgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/search_icon"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/editAccProfileImage"
+        android:layout_width="133.33dp"
+        android:layout_height="133.33dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/profileavtar"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEditProfileInputFirstName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33.33dp"
+        android:autofillHints="First Name"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAccProfileImage">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditProfileFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_medium"
+            android:drawableStart="@drawable/ic_baseline_person"
+            android:drawablePadding="15dp"
+            android:textColor="@color/white"
+            android:cursorVisible="true"
+            android:textSize="18sp"
+            android:textCursorDrawable="@drawable/cursordrawable"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEditProfileInputLastName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="13.33dp"
+        android:layout_marginEnd="33.33dp"
+        android:autofillHints="First Name"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileInputFirstName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditProfileLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_person"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/gotham_medium"
+            android:textColor="@color/white"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:textSize="18sp"
+            android:textCursorDrawable="@drawable/cursordrawable"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEditProfileInputEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="13.33dp"
+        android:layout_marginEnd="33.33dp"
+        android:autofillHints="First Name"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileInputLastName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditProfileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="15dp"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/gotham_medium"
+            android:textColor="@color/white"
+            android:cursorVisible="true"
+            android:textSize="18sp"
+            android:textCursorDrawable="@drawable/cursordrawable"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEditProfileInputPhoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="33.33dp"
+        android:autofillHints="First Name"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileInputEmail">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtEditProfilePhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
+        android:drawablePadding="15dp"
+        android:inputType="number"
+        android:fontFamily="@font/gotham_medium"
+        android:textColor="@color/white"
+        android:cursorVisible="true"
+        android:textSize="18sp"
+        android:textCursorDrawable="@drawable/cursordrawable"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEditProfileInputDob"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33.33dp"
+        android:autofillHints="First Name"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:hint="DOB"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white"
+        app:errorEnabled="false"
+        app:hintTextColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileInputPhoneNumber">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEditProfileDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_medium"
+            android:drawableStart="@drawable/ic_baseline_cake_24"
+            android:drawablePadding="15dp"
+            android:textColor="@color/white"
+            android:cursorVisible="true"
+            android:textSize="18sp"
+            android:textCursorDrawable="@drawable/cursordrawable"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnEditProfileSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33.33dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="33.33dp"
+        android:backgroundTint="@color/white"
+        android:text="SUBMIT"
+        android:textColor="#E91C1A"
+        android:textSize="20sp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEditProfileInputDob" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="520dp"
+        android:src="@drawable/ic_baseline_add_a_photo_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
